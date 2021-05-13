@@ -1,0 +1,45 @@
+#app-root {
+    height: 15em;
+    width: 15em;
+    background: lightblue;
+    overflow: hidden;
+}
+
+#modal-root {
+    position: relative;
+    z-index: 999;
+}
+
+#portlet-root {
+    height: 5em;
+    width: 16em;
+    background: lightseagreen;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 100;
+    margin-left: 250px;
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* .portlet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
