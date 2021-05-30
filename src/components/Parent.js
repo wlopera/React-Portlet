@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Modal from "./Modal";
 import Child from "./Child";
 import Portlet from "./Portlet";
+import Form from './Form'
+import Window from './Window'
 
 import "./styles.css";
 
@@ -37,18 +39,10 @@ const Parent = () => {
       <div>
         <button onClick={setShowModal}>Modal</button>
         <Portlet idRoot='root-portal-1'>
-          <Child
-            style={{ backgroundColor: "blue", padding: "2px" }}
-            click={handleClick}
-            title="PORTLET 1 : Incrementar desde id: root-portal-1"
-          />
+          <Window  title='Portlet Ventana' class='portlet-root-1' style={{ backgroundColor: "green", padding: "2px" }}/>
         </Portlet>
         <Portlet idRoot='root-portal-2'>
-          <Child
-            style={{ backgroundColor: "blue", padding: "2px" }}
-            click={handleClick}
-            title="PORTLET 2 : Incrementar desde id: root-portal-2"
-          />
+          <Form title='Portlet Formulario' class='portlet-root-2' style={{ backgroundColor: "blue", padding: "2px" }} />
         </Portlet>
       </div>
     </div>
