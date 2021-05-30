@@ -36,8 +36,19 @@ const Parent = () => {
       </div>
       <div>
         <button onClick={setShowModal}>Modal</button>
-        <Portlet>
-          <Child click={handleClick} title="Incrementar desde id: portlet-root" />
+        <Portlet idRoot='root-portal-1'>
+          <Child
+            style={{ backgroundColor: "blue", padding: "2px" }}
+            click={handleClick}
+            title="PORTLET 1 : Incrementar desde id: root-portal-1"
+          />
+        </Portlet>
+        <Portlet idRoot='root-portal-2'>
+          <Child
+            style={{ backgroundColor: "blue", padding: "2px" }}
+            click={handleClick}
+            title="PORTLET 2 : Incrementar desde id: root-portal-2"
+          />
         </Portlet>
       </div>
     </div>
