@@ -1,12 +1,15 @@
 # React - Portlet
 
-Este proyecto permite crear Portlets desde React
+Este proyecto permite agregar portlets a un react de manera dinámica
 
 ## Available Scripts
 
  ## Link: https://es.reactjs.org/docs/portals.html
 
-## Tres Id, uno para cada contenedor o portlet
+## Se genera tres Portlets:
+  1. Modal en id="modal-root" hija de id="app-root"
+  2. Portet Ventana: en idRoot='root-portal-1' hermana de id="app-root" (Se agrega el id de manera dinámica)
+  3. Portet Formulario: en idRoot='root-portal-2' hermana de id="app-root" (Se agrega el id de manera dinámica)
 
 CODIGO:
 ------
