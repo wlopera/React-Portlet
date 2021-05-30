@@ -10,20 +10,51 @@ Este proyecto permite crear Portlets desde React
 
 CODIGO:
 ------
+### index.html
 ~~~ xml
-  <body>
-      <div id="app-root"></div>
-      <div id="portlet-root"></div>
-      <div id="modal-root"></div>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>React Portlet</title>
+</head>
+
+<body>
+    <div id="app-root"></div>
+    <div id="modal-root"></div>
+</body>
+
+</html>
 ~~~ 
 ------
 
-## Salida 1: Dos portlet's
+### index.js
+------
+~~~ xml
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
 
-![Captura1](https://user-images.githubusercontent.com/7141537/118192462-cbb1d000-b40b-11eb-8a80-48b47fe6def2.PNG)
+// Estos dos contenedores son hermanos en el DOM.
+const appRoot = document.getElementById("app-root");
+// const modalRoot = document.getElementById("modal-root");
 
-## Salida 2: Dos portlet's + Modal en otra contenedor
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  appRoot
+);
+~~~ 
+------
 
-![Captura](https://user-images.githubusercontent.com/7141537/118192454-c9e80c80-b40b-11eb-81e9-70b53aa276e2.PNG)
+## Salida: Dos portlet's + Ventana y Formulario
+
+![Captura](https://user-images.githubusercontent.com/7141537/120119672-9a9d0380-c15e-11eb-8716-fb48240e3d35.PNG)
+
 
