@@ -9,19 +9,23 @@ function Form(props) {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    props.submit(data);
+  };
+
+  const closeView = () => {
+    props.close(props.id);
+  };
 
   return (
     <div>
-      <Alert color="primary">{props.title}</Alert>
+      <Alert color="primary" toggle={closeView}>
+        {props.title}
+      </Alert>
       <div className={props.class} style={props.style}>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <input placeholder="Nombre" {...register("firstName")} />{" "}
-          {/* register an input */}
-          <input
-            placeholder="Apellido"
-            {...register("lastName", { required: true })}
-          />
+          <input placeholder="Nombre" {...register("firstName")} /> {/* register an input */}
+          <input placeholder="Apellido" {...register("lastName", { required: true })} />
           {errors.lastName && <p>Apellido es obligatorio.</p>}
           <input placeholder="Edad" {...register("age", { pattern: /\d+/ })} />
           {errors.age && <p>Por favor introduzca la edad.</p>}

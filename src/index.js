@@ -7,9 +7,4 @@ import App from "./App";
 const appRoot = document.getElementById("app-root");
 // const modalRoot = document.getElementById("modal-root");
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  appRoot
-);
+ReactDOM.render(<App />, appRoot);

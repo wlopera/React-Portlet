@@ -1,5 +1,5 @@
 #app-root {
-    height: 15em;
+    height: 25em;
     width: 15em;
     background: lightblue;
     overflow: hidden;
@@ -25,7 +25,7 @@
 }
 
 .root-portal-2 {
-    height: 20em;
+    height: 23em;
     width: 20em;
     background: lightskyblue;
     position: fixed;
