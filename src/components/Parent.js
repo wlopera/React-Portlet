@@ -13,14 +13,14 @@ const Parent = () => {
   const [portlet, setPortlet] = useState([
     {
       id: "root-portal-1",
-      show: true,
+      show: false,
       class: "portlet-root-1",
       title: "Portlet Ventana",
       styles: { backgroundColor: "green", padding: "2px" },
     },
     {
       id: "root-portal-2",
-      show: true,
+      show: false,
       class: "portlet-root-2",
       title: "Portlet Formulario",
       styles: { backgroundColor: "blue", padding: "2px" },
@@ -38,7 +38,7 @@ const Parent = () => {
   const handleClosePortlet = (id) => {
     let portletChange = [...portlet];
     let newPortlet = portletChange.find((value) => value.id === id);
-    newPortlet.show = !newPortlet.show;
+    newPortlet.show = false;
     portletChange = [...portletChange, newPortlet];
     setPortlet(portletChange);
   };
@@ -50,7 +50,7 @@ const Parent = () => {
   const handleShowPortlet = (id) => {
     let portletChange = [...portlet];
     let newPortlet = portletChange.find((value) => value.id === id);
-    newPortlet.show = !newPortlet.show;
+    newPortlet.show = true;
     portletChange = [...portletChange, newPortlet];
     setPortlet(portletChange);
   };
